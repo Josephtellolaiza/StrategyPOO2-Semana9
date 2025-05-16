@@ -35,4 +35,9 @@ public abstract class Duck {
     public void setQuackBehavior(QuackBehavior qb) {
         quackBehavior = qb;
     }
+
+    public void otherMethods() {
+        
+        System.out.println("Otros métodos del pato.");
+    }
 }
