@@ -4,6 +4,9 @@ import EjercicioStrategy.clases.Duck;
 import EjercicioStrategy.clases.clasesDeFly.FlyNoWay;
 import EjercicioStrategy.clases.clasesDeFly.FlyWithJetpack;
 import EjercicioStrategy.clases.clasesDeFly.FlyWithWings;
+import EjercicioStrategy.clases.clasesDeQuack.MuteQuack;
+import EjercicioStrategy.clases.clasesDeQuack.Quack;
+import EjercicioStrategy.clases.clasesDeQuack.Squeak;
 import EjercicioStrategy.patos.DecoyDuck;
 import EjercicioStrategy.patos.MallardDuck;
 import EjercicioStrategy.patos.RedheadDuck;
@@ -34,6 +37,16 @@ public class MainPatos {
         mallard.performFly(); // No vuela
 
 
+        mallard.setQuackBehavior(new Quack()); // Inicialmente hace quack
+        mallard.performQuack(); // Hace quack
+
+        mallard.setQuackBehavior(new Squeak()); // Ahora hace squeak
+        mallard.performQuack(); // Hace squeak
+
+        mallard.setQuackBehavior(new MuteQuack()); // Ahora no hace nada
+        mallard.performQuack(); // No hace nada
+
+
         System.out.println("---------------------------------");
 
         // Crear un pato de cabeza roja (RedheadDuck)
@@ -49,6 +62,16 @@ public class MainPatos {
 
         redHead.setFlyBehavior(new FlyWithJetpack()); // Ahora vuela con jetpack
         redHead.performFly(); // Vuela con jetpack
+
+
+        redHead.setQuackBehavior(new Quack()); // Inicialmente hace quack
+        redHead.performQuack(); // Hace quack
+
+        redHead.setQuackBehavior(new Squeak()); // Ahora hace squeak
+        redHead.performQuack(); // Hace squeak
+
+        redHead.setQuackBehavior(new MuteQuack()); // Ahora no hace nada
+        redHead.performQuack(); // No hace nada
         
         
 
@@ -68,6 +91,16 @@ public class MainPatos {
         decoy.setFlyBehavior(new FlyWithJetpack()); // Ahora vuela con jetpack
         decoy.performFly(); // Vuela con jetpack
 
+
+        decoy.setQuackBehavior(new Quack()); // Inicialmente hace quack
+        decoy.performQuack(); // Hace quack
+
+        decoy.setQuackBehavior(new Squeak()); // Ahora hace squeak
+        decoy.performQuack(); // Hace squeak
+
+        decoy.setQuackBehavior(new MuteQuack()); // Ahora no hace nada
+        decoy.performQuack(); // No hace nada
+
         System.out.println("---------------------------------");
 
 
@@ -84,5 +117,15 @@ public class MainPatos {
 
         rubberDuck.setFlyBehavior(new FlyWithJetpack()); // Ahora vuela con jetpack
         rubberDuck.performFly(); // Vuela con jetpack
+
+
+        rubberDuck.setQuackBehavior(new Quack()); // Inicialmente hace quack
+        rubberDuck.performQuack(); // Hace quack
+
+        rubberDuck.setQuackBehavior(new Squeak()); // Ahora hace squeak
+        rubberDuck.performQuack(); // Hace squeak
+
+        rubberDuck.setQuackBehavior(new MuteQuack()); // Ahora no hace nada
+        rubberDuck.performQuack(); // No hace nada
     }
 }
